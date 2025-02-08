@@ -9,7 +9,6 @@ Key Components:
 - Fetches tweets based on a user query.
 - Processes tweets and predicts sentiment scores.
 """
-
 import os
 import numpy as np
 import torch
@@ -153,9 +152,8 @@ if __name__ == "__main__":
     - Fetches tweets based on the query.
     - Analyzes the sentiment of fetched tweets.
     """
-    model_path = CNN_MODEL_PATH
 
-    model = load_model(model_path, device)
+    model = load_model(CNN_MODEL_PATH, device)
 
     query = input("Enter a query string to search tweets: ")
 
