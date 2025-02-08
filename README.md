@@ -180,6 +180,10 @@ python.exe scripts/main.py
 
 The model implements a multi-channel CNN architecture:
 
+![CNN Architecture](parameters/cnn_architecture.png)
+
+![Convolution Filters](parameters/convolution_filters.png)
+
 ```plaintext
 Input Text -> Word Embeddings -> Parallel Convolution Channels -> Max Pooling -> Fully Connected Layer -> Output
 ```
