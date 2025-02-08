@@ -38,7 +38,7 @@ NUM_FILTERS = [128, 128, 128]
 FILTER_SIZES = [3, 5, 7]
 NUM_CLASSES = 1
 SAMPLING_PERCENTAGE = 1
-MAX_LENGTH = 15
+MAX_LENGTH = 34
 
 VOCAB_SIZE = len(w2v_model.key_to_index)
 EMBEDDING_DIM = w2v_model.vector_size
