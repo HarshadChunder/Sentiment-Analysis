@@ -235,12 +235,12 @@ The following plots show the training and validation losses over each epoch duri
 #### Epoch Loss
 This plot shows how the training loss evolved over the epochs.
 
-![Epoch Loss](scripts/EpochLoss.png)
+![Epoch Loss](parameters/EpochLoss.png)
 
 #### Validation Accuracy
 This plot shows how the validation accuracy changed over the epochs, with the highest recorded validation accuracy being 77.87%.
 
-![Validation Loss](scripts/ValidationEpoch.png)
+![Validation Loss](parameters/ValidationEpoch.png)
 
 ## License
 
