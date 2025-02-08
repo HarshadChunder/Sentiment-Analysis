@@ -97,8 +97,8 @@ sentiment-analysis/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/sentiment-analysis.git
-cd sentiment-analysis
+git clone https://github.com/HarshadChunder/Sentiment-Analysis
+cd Sentiment-Analysis
 ```
 
 2. Create and activate a virtual environment:
@@ -113,7 +113,7 @@ pip install -r requirements.txt
 ```
 
 4. Set up environment variables:
-Create a `.env` file in the project root with your Twitter API credentials:
+Create a `.env` file in the sentiment_analysis directory with your Twitter API credentials:
 ```plaintext
 BEARER_TOKEN=your_twitter_bearer_token
 ```
@@ -142,12 +142,12 @@ python scripts/main.py
 The model implements a multi-channel CNN architecture:
 
 ```plaintext
-Input Text -> Word Embeddings -> Parallel Convolution Channels -> Max Pooling -> Dense Layer -> Output
+Input Text -> Word Embeddings -> Parallel Convolution Channels -> Max Pooling -> Fully Connected Layer -> Output
 ```
 
 Key components:
 - Input processing through 300-dimensional Word2Vec embeddings
-- Three parallel convolutional channels (filter sizes: 3, 5, 7)
+- Three parallel convolutional channels (filter sizes: 3, 5, 7) used for local and global feature extraction
 - Batch normalization after each convolution
 - Leaky ReLU activation (slope=0.01)
 - Dropout rate of 0.3 for regularization
@@ -189,17 +189,23 @@ The system provides comprehensive monitoring through:
 - Validation accuracy logging
 - Tensor allocation tracking
 
-## Contributing
+## Training Results
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+The following plots show the training and validation losses over each epoch during the training process.
+
+#### Epoch Loss
+This plot shows how the training loss evolved over the epochs.
+
+![Epoch Loss](scripts/EpochLoss.png)
+
+#### Validation Accuracy
+This plot shows how the validation accuracy changed over the epochs, with the highest recorded validation accuracy being 77.87%.
+
+![Validation Loss](scripts/ValidationEpoch.png)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License - see the [LICENSE](LICENSE.md) file for details.
 
 ## Acknowledgments
 
