@@ -43,7 +43,7 @@ This project implements a sophisticated sentiment analysis system with the follo
 - Configurable hyperparameters
 
 ## Project Structure
-
+```
 sentiment-analysis/
 ├── datasets/                    # Storage for training data and embeddings
 │   ├── Sentiment140v1.csv      # Twitter sentiment dataset
@@ -56,32 +56,19 @@ sentiment-analysis/
 │   └── validation_accuracy.json # Model validation metrics
 ├── scripts/
 │   ├── gpu_usage.py            # GPU memory monitoring utilities
-│   │   ├── check_cuda()        # CUDA availability check
-│   │   ├── print_gpu_memory()  # GPU memory usage tracking
-│   │   └── list_tensors()      # Active tensor tracking
 │   ├── load_data.py            # Dataset loading and processing
-│   │   ├── load_sentiment140_data()  # Dataset loading
-│   │   └── reduce_dataset()    # Dataset sampling
 │   ├── main.py                 # Main execution script
-│   │   ├── load_model()        # Model loading
-│   │   └── analyze_tweets()    # Tweet sentiment analysis
 │   ├── plotter.py              # Training visualization tools
 │   └── train_cnn_model.py      # Model training implementation
 ├── sentiment_analysis/
 │   ├── cnn_model.py            # CNN architecture definition
-│   │   └── SentimentCNN        # Main model class
 │   ├── config.py               # System configuration
-│   │   └── check_files()       # Dataset verification
 │   ├── early_stopping.py       # Training control mechanism
-│   │   └── EarlyStopping      # Early stopping implementation
 │   ├── twitter.py              # Twitter API integration
-│   │   ├── fetch_tweets()      # Tweet retrieval
-│   │   └── handle_rate_limit() # API rate limit handling
 │   └── word_to_vector.py       # Word embedding utilities
-│       ├── preprocess_tweet()  # Tweet cleaning
-│       └── text_to_indices()   # Text vectorization
 └── setup/
     └── setup_datasets.py       # Dataset download and setup
+```
 
 ## Setup Instructions
 
@@ -91,25 +78,65 @@ sentiment-analysis/
 - CUDA-compatible GPU (recommended)
 - Twitter API credentials
 - 16GB RAM minimum (32GB recommended)
-- 5GB free disk space for datasets and models
+- 6GB free disk space for datasets and models
 
 ### Installation
 
 1. Clone the repository:
 ```bash
+# Bash
 git clone https://github.com/HarshadChunder/Sentiment-Analysis
 cd Sentiment-Analysis
+
+# PowerShell
+git clone https://github.com/HarshadChunder/Sentiment-Analysis
+Set-Location -Path Sentiment-Analysis
 ```
 
-2. Create and activate a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+2. Set up the Python environment:
+
+   Option A - Using conda (recommended):
+   ```bash
+   # Bash
+   conda create -n sentiment python=3.8
+   conda activate sentiment
+
+   # PowerShell
+   conda create -n sentiment python=3.8
+   conda activate sentiment
+   ```
+
+   Option B - Using existing Python environment:
+   - Ensure you have Python 3.8 or higher installed
+   - If using an IDE (PyCharm, VSCode, etc.):
+     - Open the project in your IDE
+     - Select your preferred Python interpreter
+     - The IDE should detect and use requirements.txt automatically
+   - If using system Python:
+     - Make sure pip is up to date:
+       ```bash
+       # Bash
+       python -m pip install --upgrade pip
+
+       # PowerShell
+       python.exe -m pip install --upgrade pip
+       ```
+     - Consider using `--user` flag when installing requirements to avoid permission issues:
+       ```bash
+       # Bash
+       pip install --user -r requirements.txt
+
+       # PowerShell
+       python.exe -m pip install --user -r requirements.txt
+       ```
 
 3. Install required packages:
 ```bash
+# Bash
 pip install -r requirements.txt
+
+# PowerShell
+python.exe -m pip install -r requirements.txt
 ```
 
 4. Set up environment variables:
@@ -120,19 +147,31 @@ BEARER_TOKEN=your_twitter_bearer_token
 
 5. Download required datasets:
 ```bash
+# Bash
 python setup/setup_datasets.py
+
+# PowerShell
+python.exe setup/setup_datasets.py
 ```
 
 ### Usage
 
 1. Training the model:
 ```bash
+# Bash
 python scripts/train_cnn_model.py
+
+# PowerShell
+python.exe scripts/train_cnn_model.py
 ```
 
 2. Analyzing tweets:
 ```bash
+# Bash
 python scripts/main.py
+
+# PowerShell
+python.exe scripts/main.py
 ```
 
 ## Implementation Details
