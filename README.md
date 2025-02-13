@@ -246,6 +246,10 @@ This plot shows how the validation accuracy changed over the epochs, with the hi
 
 ![Validation Loss](parameters/ValidationEpoch.png)
 
+## Output
+
+See [Sentiment Analysis README](./sentiment_analysis/README.md) for model output for 16 tweets.
+
 ## License
 
 This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License - see the [LICENSE](LICENSE.md) file for details.
