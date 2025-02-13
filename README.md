@@ -248,7 +248,7 @@ This plot shows how the validation accuracy changed over the epochs, with the hi
 
 ## Output
 
-See [Sentiment Analysis README](./sentiment_analysis/README.md) for model output for 16 tweets.
+See [Sentiment Analysis README](./sentiment_analysis/README.md) for model output on 16 tweets.
 
 ## License
 
